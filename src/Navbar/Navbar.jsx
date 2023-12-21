@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../authentication/Provider/AuthProvider";
 import { Link, NavLink } from "react-router-dom";
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -29,7 +30,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className='flex justify-center items-center'>
-                        <h3 className='font-medium ml-2'>Task Management</h3>
+                        <img className="w-16" src={logo} alt="" />
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
