@@ -42,6 +42,33 @@ const Navbar = () => {
                         >
                             Home
                         </NavLink></li>
+                        <li className='mx-3 font-medium'><NavLink
+                            to="/tasks"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            Tasks
+                        </NavLink></li>
+                        <li className='mx-3 font-medium'><NavLink
+                            to="/projects"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            Projects
+                        </NavLink></li>
+                        {
+                            user &&
+                            <li className='mx-3 font-medium'><NavLink
+                                to="/dashboard"
+                                className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "active" : ""
+                                }
+                            >
+                                Dashboard
+                            </NavLink></li>
+                        }
                     </ul>
                 </div>
                 <div className="navbar-end">

@@ -4,6 +4,12 @@ import Error from "../pages/Error/Error";
 import Home from "../pages/Home/Home";
 import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
+import Tasks from "../pages/Tasks/Tasks";
+import Projects from "../pages/Projects/Projects";
+import Dashboard from "../pages/Dashboard/Dashboard";
+import AddNewTask from "../pages/Dashboard/AddNewTask";
+import PreviousTask from "../pages/Dashboard/PreviousTask";
+import AllUsers from "../pages/Dashboard/AllUsers";
 
 
 const router = createBrowserRouter([
@@ -17,6 +23,14 @@ const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
+                path: "/tasks",
+                element: <Tasks></Tasks>
+            },
+            {
+                path: "/projects",
+                element: <Projects></Projects>
+            },
+            {
                 path: "/register",
                 element: <Register></Register>
             },
@@ -25,6 +39,24 @@ const router = createBrowserRouter([
                 element: <Login></Login>
             }
         ],
+    },
+    {
+        path: "dashboard",
+        element: <Dashboard></Dashboard>,
+        children: [
+            {
+                path: "addNewTask",
+                element: <AddNewTask></AddNewTask>
+            },
+            {
+                path: "previousTask",
+                element: <PreviousTask></PreviousTask>
+            },
+            {
+                path: "allUsers",
+                element: <AllUsers></AllUsers>
+            }
+        ]
     },
 ]);
 

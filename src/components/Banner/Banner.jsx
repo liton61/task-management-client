@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Banner = () => {
@@ -9,7 +10,9 @@ const Banner = () => {
                     <div className="max-w-md">
                         <h1 className="mb-5 text-5xl font-bold">Task Management</h1>
                         <p className="mb-5">A Task Management System is a software tool or platform designed to help individuals or teams organize, track, prioritize, and complete tasks efficiently.</p>
+                        <Link to="/login">
                         <button className="btn btn-success text-white">Let’s Explore <i className="fa-solid fa-arrow-right"></i></button>
+                        </Link>
                     </div>
                 </div>
             </div>
