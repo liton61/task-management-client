@@ -44,20 +44,28 @@ const Navbar = () => {
                             Home
                         </NavLink></li>
                         <li className='mx-3 font-medium'><NavLink
-                            to="/tasks"
+                            to="/developer"
                             className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
-                            Tasks
+                            Developer
                         </NavLink></li>
                         <li className='mx-3 font-medium'><NavLink
-                            to="/projects"
+                            to="/corporate"
                             className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
-                            Projects
+                            Corporate
+                        </NavLink></li>
+                        <li className='mx-3 font-medium'><NavLink
+                            to="/banker"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            Banker
                         </NavLink></li>
                         {
                             user &&

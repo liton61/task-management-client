@@ -4,12 +4,14 @@ import Error from "../pages/Error/Error";
 import Home from "../pages/Home/Home";
 import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
-import Tasks from "../pages/Tasks/Tasks";
-import Projects from "../pages/Projects/Projects";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import AddNewTask from "../pages/Dashboard/AddNewTask";
 import PreviousTask from "../pages/Dashboard/PreviousTask";
-import AllUsers from "../pages/Dashboard/AllUsers";
+// import AllUsers from "../pages/Dashboard/AllUsers";
+import UpdateTask from "../pages/Dashboard/UpdateTask";
+import DeveloperSection from "../components/UserTypesSection/DeveloperSection";
+import CorporateProfessionalsSection from "../components/UserTypesSection/CorporateProfessionalsSection";
+import BankerSection from "../components/UserTypesSection/BankerSection";
 
 
 const router = createBrowserRouter([
@@ -23,12 +25,16 @@ const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: "/tasks",
-                element: <Tasks></Tasks>
+                path: "/developer",
+                element: <DeveloperSection></DeveloperSection>
             },
             {
-                path: "/projects",
-                element: <Projects></Projects>
+                path: "/corporate",
+                element: <CorporateProfessionalsSection></CorporateProfessionalsSection>
+            },
+            {
+                path: "/banker",
+                element: <BankerSection></BankerSection>
             },
             {
                 path: "/register",
@@ -53,9 +59,14 @@ const router = createBrowserRouter([
                 element: <PreviousTask></PreviousTask>
             },
             {
-                path: "allUsers",
-                element: <AllUsers></AllUsers>
-            }
+                path: "updateTask/:id",
+                element: <UpdateTask></UpdateTask>,
+                loader: ({ params }) => fetch(`http://localhost:5000/task/${params.id}`)
+            },
+            // {
+            //     path: "allUsers",
+            //     element: <AllUsers></AllUsers>
+            // }
         ]
     },
 ]);

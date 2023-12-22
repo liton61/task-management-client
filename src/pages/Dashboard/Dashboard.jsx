@@ -25,7 +25,7 @@ const Dashboard = () => {
                             </div>
 
                         }
-                        <li className="mb-3 font-medium"><NavLink to="/dashboard/allUsers"><i className="fa-solid fa-bars"></i> Dashboard</NavLink></li>
+                        {/* <li className="mb-3 font-medium"><NavLink to="/dashboard"><i className="fa-solid fa-bars"></i> Dashboard</NavLink></li> */}
                         <li className="mb-3 font-medium"><NavLink to="/dashboard/addNewTask"><i className="fa-solid fa-plus"></i> Add new Task</NavLink></li>
                         <li className="font-medium"><NavLink to="/dashboard/previousTask"><i className="fa-solid fa-backward"></i> Previous Task</NavLink></li>
                         <div className="divider font-medium">OR</div>

@@ -12,7 +12,7 @@ const PreviousTask = () => {
     }, [])
     return (
         <div>
-            <h1>Previous Task</h1>
+            {/* <h1 className="text-center text-3xl mb-5 font-semibold">Previous Task</h1> */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
                 {
                     tasks.map(task => <TaskCard key={task._id} task={task}

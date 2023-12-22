@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
@@ -39,15 +40,17 @@ const TaskCard = ({ task, tasks, setTasks }) => {
     }
     return (
         <div>
-            <div className="card w-96 bg-neutral text-neutral-content mb-1">
+            <div className="card w-80 mr-14 md:w-80 md:mx-3 md:mr-14 mb-5 bg-neutral text-neutral-content">
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{title}</h2>
-                    <p>{priority}</p>
-                    <p>{deadline}</p>
+                    <p>Priority :  {priority}</p>
+                    <p>Deadline : {deadline}</p>
                     <p>{description}</p>
                     <div className="card-actions justify-end">
                         <button onClick={() => handleDelete(_id)} className="btn"><i className="fa-solid fa-trash-can text-red-600"></i></button>
-                        <button className="btn"><i className="fa-solid fa-pen-to-square text-green-600"></i></button>
+                        <Link to={`/dashboard/updateTask/${_id}`}>
+                            <button className="btn"><i className="fa-solid fa-pen-to-square text-green-600"></i></button>
+                        </Link>
                     </div>
                 </div>
             </div>

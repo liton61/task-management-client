@@ -1,12 +1,16 @@
 import Banner from "../../components/Banner/Banner";
-import UserTypesSection from "../../components/UserTypesSection/UserTypesSection";
+import DeveloperSection from "../../components/UserTypesSection/DeveloperSection";
+import BankerSection from "../../components/UserTypesSection/BankerSection";
+import CorporateProfessionalsSection from "../../components/UserTypesSection/CorporateProfessionalsSection";
 
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <UserTypesSection></UserTypesSection>
+            <DeveloperSection></DeveloperSection>
+            <CorporateProfessionalsSection></CorporateProfessionalsSection>
+            <BankerSection></BankerSection>
         </div>
     );
 };
