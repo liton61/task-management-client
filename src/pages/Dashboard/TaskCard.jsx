@@ -27,7 +27,7 @@ const TaskCard = ({ task, tasks, setTasks }) => {
                         if (data.deletedCount > 0) {
                             Swal.fire(
                                 'Deleted!',
-                                'Your file has been deleted.',
+                                'Task has been deleted.',
                                 'success'
                             )
                             const remaining = tasks.filter(del => del._id !== _id);

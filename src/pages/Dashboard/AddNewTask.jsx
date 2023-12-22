@@ -1,6 +1,10 @@
 import Swal from "sweetalert2";
+import { AuthContext } from "../../authentication/Provider/AuthProvider";
+import { useContext } from "react";
 
 const AddNewTask = () => {
+    const { user } = useContext(AuthContext);
+    const email = (user?.email);
     const handleSubmit = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -8,7 +12,7 @@ const AddNewTask = () => {
         const deadline = form.deadline.value;
         const priority = form.priority.value;
         const description = form.description.value;
-        const formInfo = { title, deadline, priority, description };
+        const formInfo = { title, deadline, priority, description, email };
         console.log(formInfo);
         form.reset();
         fetch('http://localhost:5000/task', {
